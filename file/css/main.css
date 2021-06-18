@@ -33,7 +33,7 @@ main {
 }
 
 nav {
-    width: 100px;
+    width: 128px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -63,6 +63,13 @@ header img {
 }
 
 /* nav */
+nav span {
+    margin-top: 128px;
+    display: block;
+    color: lightcyan;
+    font-size: larger;
+}
+
 nav a {
     display: block;
     padding: 8px;
