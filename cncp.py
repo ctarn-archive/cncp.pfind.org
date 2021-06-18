@@ -6,8 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 def copy_file(dir_in, dir_out):
-    shutil.rmtree(dir_out, ignore_errors=True)
-    shutil.copytree(dir_in, dir_out)
+    shutil.copytree(dir_in, dir_out, dirs_exist_ok=True)
 
 
 def index(dir_in, dir_out, tmpl):
