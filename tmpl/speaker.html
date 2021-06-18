@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>特邀专家</h2>
+<section class="speaker-nav">
+    {% for k, item in items.items() %}
+    <span><a href="#{{ item.id }}">{{ item.name }}</a></span>
+    {% endfor %}
+</section>
+
+{% for k, item in items.items() %}
+<section class="speaker" id="{{ k }}">
+    <div class="bio">
+        <img src="/doc/photo/{{ k }}.png"/>
+        <div class="name">{{ item.name }}</div>
+        <div class="affiliation">{{ item.affiliation }}</div>
+        <div class="links"><a href="{{ item.url }}">简历</a></div>
+    </div>
+    <div class="talk">
+        {{ item.talk }}
+    </div>
+</section>
+{% endfor %}
+{% endblock %}

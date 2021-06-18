@@ -123,3 +123,68 @@ section.news img {
     width: 80%;
     margin: 0 auto;
 }
+
+/* speaker */
+section.speaker-nav {
+    margin-top: 32px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+section.speaker-nav span {
+    width: 64px;
+    margin: 4px;
+    text-align: center;
+}
+
+section.speaker {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: dotted 2px darkcyan;
+}
+
+section.speaker div.bio {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.speaker div.bio div {
+    margin: 4px;
+}
+
+section.speaker div.bio img {
+    display: block;
+    width: 160px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+section.speaker div.name {
+    font-weight: bold;
+    font-size: larger;
+}
+
+section.speaker div.affiliation {
+    text-align: center;
+}
+
+section.speaker div.talk {
+    width: 550px;
+    text-align: justify;
+}
+
+section.speaker h3 {
+    font-size: large;
+}
+
+section.speaker h4 {
+    margin-bottom: 4px;
+}
