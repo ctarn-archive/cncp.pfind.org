@@ -30,7 +30,7 @@ def speaker(dir_in, dir_out, tmpl):
     for k, v in items.items():
         with open(os.path.join(dir_in, 'talk', '2021', f'{k}.html')) as file:
             v['talk'] = file.read()
-    os.makedirs(dir_out, exist_ok=True)
+    os.makedirs(os.path.join(dir_out, 'speaker'), exist_ok=True)
     with open(os.path.join(dir_out, 'speaker', 'index.html'), 'w') as file:
         file.write(tmpl.render(items=items))
 
