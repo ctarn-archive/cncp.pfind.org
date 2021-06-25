@@ -188,6 +188,10 @@ section.speaker div.talk {
     text-align: justify;
 }
 
+section.speaker div.talk h3 {
+    text-align: left;
+}
+
 section.speaker h3 {
     font-size: large;
 }
