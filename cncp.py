@@ -47,6 +47,10 @@ def main():
     env = Environment(loader=loader)
     index(dir_out, env.get_template('index.html'))
     speaker(dir_out, env.get_template('speaker.html'))
+    for page in ['register']:
+        os.makedirs(os.path.join(dir_out, page), exist_ok=True)
+        with open(os.path.join(dir_out, page, 'index.html'), 'w') as file:
+            file.write(env.get_template(f'{page}.html').render())
 
 
 if __name__ == '__main__':
