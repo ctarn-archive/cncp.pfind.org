@@ -97,8 +97,13 @@ nav a.qr {
     background: white;
 }
 
+nav img.qr {
+    width: 100%;
+    border-radius: 4px;
+}
+
 nav a.logo {
-    min-height: 80px;
+    height: 80px;
     margin: 4px 0;
     padding: 0;
     border: none;
@@ -108,11 +113,6 @@ nav a.logo {
 nav img.logo {
     max-height: 80px;
     max-width: 100%;
-}
-
-nav img.qr {
-    max-width: 100%;
-    border-radius: 4px;
 }
 
 /* article */
