@@ -91,6 +91,12 @@ nav a:hover {
     background: lightblue;
 }
 
+nav a.qr {
+    padding: 0;
+    border: none;
+    background: white;
+}
+
 nav a.logo {
     min-height: 80px;
     margin: 4px 0;
@@ -99,8 +105,12 @@ nav a.logo {
     background: lightblue;
 }
 
-nav img.logo {
+nav img {
     width: 100%;
+}
+
+nav img.qr {
+    border-radius: 4px;
 }
 
 /* article */
