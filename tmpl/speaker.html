@@ -14,7 +14,17 @@
         <img src="/doc/photo/{{ k }}.png"/>
         <div class="name">{{ item.name }}</div>
         <div class="affiliation">{{ item.affiliation }}</div>
-        <div class="links"><a href="{{ item.url }}">介绍</a></div>
+        <div class="links">
+            <a href="{{ item.url }}">专家介绍</a>
+            {% if item.video %}
+            <span> | </span>
+            <a href="{{ item.video }}">视频回放</a>
+            {% endif %}
+            {% if item.slides %}
+            <span> | </span>
+            <a href="{{ item.slides }}">幻灯片</a>
+            {% endif %}
+        </div>
     </div>
     <div class="talk">
         {{ item.talk }}
