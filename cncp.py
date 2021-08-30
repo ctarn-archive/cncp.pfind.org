@@ -40,10 +40,11 @@ def schedule(dir_out, tmpl):
     with open(os.path.join('data', 'speaker2021.csv')) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            items[row['id']] = row
-    for k, v in items.items():
-        with open(os.path.join('data', 'talk', '2021', f'{k}.html')) as file:
-            v['talk'] = file.read()
+            items[row['id']] = f'''
+        <td class="title"><a href="/speaker#{row['id']}">{row['title']}</a></td>
+        <td class="name">{row['name']}</td>
+        <td class="affiliation">{row['affiliation']}</td>
+'''
     os.makedirs(os.path.join(dir_out, 'schedule'), exist_ok=True)
     with open(os.path.join(dir_out, 'schedule', 'index.html'), 'w') as file:
         file.write(tmpl.render(items=items))

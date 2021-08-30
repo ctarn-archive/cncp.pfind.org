@@ -227,3 +227,50 @@ section.speaker h3 {
 section.speaker h4 {
     margin-bottom: 4px;
 }
+
+section.schedule h3 {
+    text-align: center;
+}
+
+section.schedule table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    border-bottom: solid 1px gray;
+}
+
+section.schedule tr:nth-child(odd) {
+    background: #f0f0f0;
+}
+
+section.schedule tr:hover {
+    background: #dddddd;
+}
+
+section.schedule th {
+    padding: 16px 4px;
+    background: darkcyan;
+    color: white;
+    font-weight: bolder;
+}
+
+section.schedule td {
+    padding: 8px 4px;
+}
+
+section.schedule td.session, section.schedule td.host {
+    font-weight: bold;
+}
+
+section.schedule td.time, section.schedule td.session {
+    width: 100px;
+    text-align: center;
+}
+
+section.schedule td.name {
+    width: 64px;
+}
+
+section.schedule td.affiliation {
+    width: 128px;
+}
