@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>会议日程</h2>
+<h3>2021年8月25日 星期三</h3>
+<table>
+    <tr>
+        <th class="time">时间</th>
+        <th class="title">题目</th>
+        <th class="name">报告人</th>
+        <th class="affiliation">单位</th>
+    </tr>
+    <tr>
+        <td class="time">09:00-09:10</td>
+        <td class="event" colspan="3">开幕</td>
+    </tr>
+    <tr>
+        <td class="time">09:10-09:20</td>
+        <td class="event" colspan="3">合影</td>
+    </tr>
+    <tr>
+        <td class="session">Session 1</td>
+        <td class="host" colspan="3">主持人：迟浩</td>
+    </tr>
+    <tr>
+        <td class="time">09:20-09:50</td>
+        <td class="title">{{ items.chenpeng.title }}</td>
+        <td class="name">{{ items.chenpeng.name }}</td>
+        <td class="affiliation">{{ items.chenpeng.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">09:50-10:20</td>
+        <td class="title">{{ items.tanminjia.title }}</td>
+        <td class="name">{{ items.tanminjia.name }}</td>
+        <td class="affiliation">{{ items.tanminjia.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">10:20-10:30</td>
+        <td class="event" colspan="3">休息</td>
+    </tr>
+    <tr>
+        <td class="session">Session 2</td>
+        <td class="host" colspan="3">主持人：谭敏佳</td>
+    </tr>
+    <tr>
+        <td class="time">10:30-11:00</td>
+        <td class="title">{{ items.chenshunxing.title }}</td>
+        <td class="name">{{ items.chenshunxing.name }}</td>
+        <td class="affiliation">{{ items.chenshunxing.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">11:00-11:30</td>
+        <td class="title">{{ items.huanghe.title }}</td>
+        <td class="name">{{ items.huanghe.name }}</td>
+        <td class="affiliation">{{ items.huanghe.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">11:30-12:00</td>
+        <td class="title">{{ items.zhuli.title }}</td>
+        <td class="name">{{ items.zhuli.name }}</td>
+        <td class="affiliation">{{ items.zhuli.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">12:00-13:30</td>
+        <td class="event" colspan="3">午餐、休息</td>
+    </tr>
+    <tr>
+        <td class="session" colspan="4">赞助报告</td>
+    </tr>
+    <tr>
+        <td class="time">13:30-13:45</td>
+        <td class="title">LCMS等常用分析仪器供气需求及方式选择简介</td>
+        <td class="name">孙金荣</td>
+        <td class="affiliation">上海析维医疗科技有限公司</td>
+    </tr>
+    <tr>
+        <td class="time">13:45-14:00</td>
+        <td class="title">PaSER解蛋白质组学大数据解析之困</td>
+        <td class="name">刘先明</td>
+        <td class="affiliation">布鲁克（北京）科技有限公司</td>
+    </tr>
+    <tr>
+        <td class="session">Session 3</td>
+        <td class="host" colspan="3">主持人：秦伟捷</td>
+    </tr>
+    <tr>
+        <td class="time">14:00-14:30</td>
+        <td class="title">{{ items.chenxing.title }}</td>
+        <td class="name">{{ items.chenxing.name }}</td>
+        <td class="affiliation">{{ items.chenxing.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">14:30-15:00</td>
+        <td class="title">{{ items.dingming.title }}</td>
+        <td class="name">{{ items.dingming.name }}</td>
+        <td class="affiliation">{{ items.dingming.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">15:00-15:30</td>
+        <td class="title">{{ items.liyanchang.title }}</td>
+        <td class="name">{{ items.liyanchang.name }}</td>
+        <td class="affiliation">{{ items.liyanchang.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">15:30-15:45</td>
+        <td class="event" colspan="3">休息</td>
+    </tr>
+    </tr>
+    <tr>
+        <td class="session">Session 4</td>
+        <td class="host" colspan="3">主持人：李衍常</td>
+    </tr>
+    <tr>
+        <td class="time">15:45-16:15</td>
+        <td class="title">{{ items.zhangying.title }}</td>
+        <td class="name">{{ items.zhangying.name }}</td>
+        <td class="affiliation">{{ items.zhangying.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">16:15-16:45</td>
+        <td class="title">{{ items.qinweijie.title }}</td>
+        <td class="name">{{ items.qinweijie.name }}</td>
+        <td class="affiliation">{{ items.qinweijie.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">16:45-17:15</td>
+        <td class="title">{{ items.sunshiwei.title }}</td>
+        <td class="name">{{ items.sunshiwei.name }}</td>
+        <td class="affiliation">{{ items.sunshiwei.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">17:15-17:45</td>
+        <td class="title">{{ items.xiayu.title }}</td>
+        <td class="name">{{ items.xiayu.name }}</td>
+        <td class="affiliation">{{ items.xiayu.affiliation }}</td>
+    </tr>
+</table>
+<h3>2021年8月26日 星期四</h3>
+<table>
+    <tr>
+        <th class="time">时间</th>
+        <th class="title">题目</th>
+        <th class="name">报告人</th>
+        <th class="affiliation">单位</th>
+    </tr>
+    <tr>
+        <td class="session">Session 5</td>
+        <td class="host" colspan="3">主持人：杨明坤</td>
+    </tr>
+    <tr>
+        <td class="time">09:00-09:30</td>
+        <td class="title">{{ items.tianruijun.title }}</td>
+        <td class="name">{{ items.tianruijun.name }}</td>
+        <td class="affiliation">{{ items.tianruijun.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">09:30-10:00</td>
+        <td class="title">{{ items.jiangying.title }}</td>
+        <td class="name">{{ items.jiangying.name }}</td>
+        <td class="affiliation">{{ items.jiangying.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">10:00-10:30</td>
+        <td class="title">{{ items.zhouhu.title }}</td>
+        <td class="name">{{ items.zhouhu.name }}</td>
+        <td class="affiliation">{{ items.zhouhu.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">10:30-10:40</td>
+        <td class="event" colspan="3">休息</td>
+    </tr>
+    <tr>
+        <td class="session">Session 6</td>
+        <td class="host" colspan="3">主持人：周虎</td>
+    </tr>
+    <tr>
+        <td class="time">10:40-11:10</td>
+        <td class="title">{{ items.xielu.title }}</td>
+        <td class="name">{{ items.xielu.name }}</td>
+        <td class="affiliation">{{ items.xielu.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">11:10-11:40</td>
+        <td class="title">{{ items.yangmingkun.title }}</td>
+        <td class="name">{{ items.yangmingkun.name }}</td>
+        <td class="affiliation">{{ items.yangmingkun.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">11:40-12:10</td>
+        <td class="title">{{ items.liuzexian.title }}</td>
+        <td class="name">{{ items.liuzexian.name }}</td>
+        <td class="affiliation">{{ items.liuzexian.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">12:10-13:30</td>
+        <td class="event" colspan="3">午餐、休息</td>
+    </tr>
+    <tr>
+        <td class="session" colspan="4">赞助报告</td>
+    </tr>
+    <tr>
+        <td class="time">13:30-13:45</td>
+        <td class="title">AssayMAP Bravo工作站为蛋白质组学样品前处理提供自动化解决方案</td>
+        <td class="name">万晓桢</td>
+        <td class="affiliation">安捷伦科技（中国）有限公司</td>
+    </tr>
+    <tr>
+        <td class="time">13:45-14:00</td>
+        <td class="title">MS role in current pandemic--Proteomic techniques in the study of COVID-19</td>
+        <td class="name">杨湘云</td>
+        <td class="affiliation">赛默飞世尔科技（中国）有限公司</td>
+    </tr>
+    <tr>
+        <td class="session">Session 7</td>
+        <td class="host" colspan="3">主持人：乔亮</td>
+    </tr>
+    <tr>
+        <td class="time">14:00-14:30</td>
+        <td class="title">{{ items.tangchun.title }}</td>
+        <td class="name">{{ items.tangchun.name }}</td>
+        <td class="affiliation">{{ items.tangchun.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">14:30-15:00</td>
+        <td class="title">{{ items.lixueming.title }}</td>
+        <td class="name">{{ items.lixueming.name }}</td>
+        <td class="affiliation">{{ items.lixueming.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">15:00-15:30</td>
+        <td class="title">{{ items.zhaoqun.title }}</td>
+        <td class="name">{{ items.zhaoqun.name }}</td>
+        <td class="affiliation">{{ items.zhaoqun.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">15:30-16:00</td>
+        <td class="title">{{ items.zhengjie.title }}</td>
+        <td class="name">{{ items.zhengjie.name }}</td>
+        <td class="affiliation">{{ items.zhengjie.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">16:00-16:15</td>
+        <td class="event" colspan="3">休息</td>
+    </tr>
+    <tr>
+        <td class="session">Session 8</td>
+        <td class="host" colspan="3">主持人：赵群</td>
+    </tr>
+    <tr>
+        <td class="time">16:15-16:45</td>
+        <td class="title">{{ items.qiaoliang.title }}</td>
+        <td class="name">{{ items.qiaoliang.name }}</td>
+        <td class="affiliation">{{ items.qiaoliang.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">16:45-17:15</td>
+        <td class="title">{{ items.shenhuali.title }}</td>
+        <td class="name">{{ items.shenhuali.name }}</td>
+        <td class="affiliation">{{ items.shenhuali.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">17:15-17:45</td>
+        <td class="title">{{ items.shuiwenqing.title }}</td>
+        <td class="name">{{ items.shuiwenqing.name }}</td>
+        <td class="affiliation">{{ items.shuiwenqing.affiliation }}</td>
+    </tr>
+    <tr>
+        <td class="time">17:45-18:00</td>
+        <td class="title">闭幕</td>
+        <td class="name">徐平</td>
+        <td class="affiliation">国家蛋白质科学中心（北京）</td>
+    </tr>
+</table>
+{% endblock %}
