@@ -41,7 +41,7 @@ def schedule(dir_out, tmpl):
         reader = csv.DictReader(file)
         for row in reader:
             items[row['id']] = f'''
-        <td class="title"><a href="/speaker#{row['id']}">{row['title']}</a></td>
+        <td class="title"><a href="/speaker/#{row['id']}">{row['title']}</a></td>
         <td class="name">{row['name']}</td>
         <td class="affiliation">{row['affiliation']}</td>
 '''
