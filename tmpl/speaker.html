@@ -27,7 +27,17 @@
         </div>
     </div>
     <div class="talk">
-        {{ item.talk }}
+        {% if item.title %}
+        <h3>{{ item.title }}</h3>
+        {% endif %}
+        {% if item.abstract %}
+        <h4>Abstract:</h4>
+        {{ item.abstract }}
+        {% endif %}
+        {% if item.keywords %}
+        <h4>Keywords:</h4>
+        {{ item.keywords }}
+        {% endif %}
     </div>
 </section>
 {% endfor %}

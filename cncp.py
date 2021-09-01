@@ -27,9 +27,6 @@ def speaker(dir_out, tmpl):
         reader = csv.DictReader(file)
         for row in reader:
             items[row['id']] = row
-    for k, v in items.items():
-        with open(os.path.join('data', 'talk', '2021', f'{k}.html')) as file:
-            v['talk'] = file.read()
     os.makedirs(os.path.join(dir_out, 'speaker'), exist_ok=True)
     with open(os.path.join(dir_out, 'speaker', 'index.html'), 'w') as file:
         file.write(tmpl.render(items=items))
