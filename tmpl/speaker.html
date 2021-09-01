@@ -16,13 +16,13 @@
         <div class="affiliation">{{ item.affiliation }}</div>
         <div class="links">
             <a href="{{ item.url }}">简介</a>
-            {% if item.video %}
-            <span> | </span>
-            <a href="{{ item.video }}">视频</a>
-            {% endif %}
             {% if item.slides %}
             <span> | </span>
             <a href="{{ item.slides }}">幻灯片</a>
+            {% endif %}
+            {% if item.video %}
+            <span> | </span>
+            <a href="{{ item.video }}">视频</a>
             {% endif %}
         </div>
     </div>
