@@ -117,10 +117,15 @@ nav img.logo {
 
 /* article */
 article h2 {
-    width: 256px;
+    width: fit-content;
+    padding: 4px 64px;
     margin: auto;
     border-radius: 16px;
     background: lightcyan;
+    text-align: center;
+}
+
+article h3 {
     text-align: center;
 }
 
@@ -134,10 +139,6 @@ footer a {
 section.news {
     margin: 64px 0;
     padding: 16px 0;
-}
-
-section.news h3 {
-    text-align: center;
 }
 
 section.news time {
@@ -220,16 +221,8 @@ section.speaker div.talk h3 {
     text-align: left;
 }
 
-section.speaker h3 {
-    font-size: large;
-}
-
 section.speaker h4 {
     margin-bottom: 4px;
-}
-
-section.schedule h3 {
-    text-align: center;
 }
 
 section.schedule table {

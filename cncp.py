@@ -23,7 +23,7 @@ def index(dir_out, tmpl):
 
 def speaker(dir_out, tmpl):
     items = {}
-    with open(os.path.join('data', 'speaker2021.csv')) as file:
+    with open(os.path.join('data', 'cncp2021.csv')) as file:
         reader = csv.DictReader(file)
         for row in reader:
             items[row['id']] = row
@@ -34,7 +34,7 @@ def speaker(dir_out, tmpl):
 
 def schedule(dir_out, tmpl):
     items = {}
-    with open(os.path.join('data', 'speaker2021.csv')) as file:
+    with open(os.path.join('data', 'cncp2021.csv')) as file:
         reader = csv.DictReader(file)
         for row in reader:
             items[row['id']] = f'''
