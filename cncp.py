@@ -52,7 +52,7 @@ def webinar_2021_glycoproteomics(dir_out, tmpl, tmpl_talk):
     with open(os.path.join('data', '2021-glycoproteomics.csv')) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            items[row['id']] = tmpl_talk.render(talk=row)
+            items[row['id']] = tmpl_talk.render(**row)
     os.makedirs(os.path.join(dir_out, 'webinar', '2021-glycoproteomics'), exist_ok=True)
     with open(os.path.join(dir_out, 'webinar', '2021-glycoproteomics', 'index.html'), 'w') as file:
         file.write(tmpl.render(items=items))
@@ -73,7 +73,7 @@ def main():
     schedule(dir_out, env.get_template('schedule.html'))
     webinar_2021_glycoproteomics(dir_out,
                                  env.get_template('webinar/2021-glycoproteomics.html'),
-                                 env.get_template('item/talk.html')
+                                 env.get_template('item/speaker.html')
                                  )
     for page in ['about', 'register', 'analysis', 'cxms/register']:
         os.makedirs(os.path.join(dir_out, page), exist_ok=True)
