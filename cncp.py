@@ -47,6 +47,17 @@ def schedule(dir_out, tmpl):
         file.write(tmpl.render(items=items))
 
 
+def webinar_2021_glycoproteomics(dir_out, tmpl, tmpl_talk):
+    items = {}
+    with open(os.path.join('data', '2021-glycoproteomics.csv')) as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            items[row['id']] = tmpl_talk.render(talk=row)
+    os.makedirs(os.path.join(dir_out, 'webinar', '2021-glycoproteomics'), exist_ok=True)
+    with open(os.path.join(dir_out, 'webinar', '2021-glycoproteomics', 'index.html'), 'w') as file:
+        file.write(tmpl.render(items=items))
+
+
 def main():
     parser = argparse.ArgumentParser(description='CNCP Website Generator')
     parser.add_argument('dst', type=str, metavar='dst')
@@ -60,6 +71,10 @@ def main():
     index(dir_out, env.get_template('index.html'))
     speaker(dir_out, env.get_template('speaker.html'))
     schedule(dir_out, env.get_template('schedule.html'))
+    webinar_2021_glycoproteomics(dir_out,
+                                 env.get_template('webinar/2021-glycoproteomics.html'),
+                                 env.get_template('item/talk.html')
+                                 )
     for page in ['about', 'register', 'analysis', 'cxms/register']:
         os.makedirs(os.path.join(dir_out, page), exist_ok=True)
         with open(os.path.join(dir_out, page, 'index.html'), 'w') as file:
