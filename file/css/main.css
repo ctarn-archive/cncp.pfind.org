@@ -33,14 +33,14 @@ main {
 }
 
 nav {
-    width: 128px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 article {
-    width: 770px;
+    width: 750px;
     border-radius: 32px;
     padding: 32px;
     background: #fff;
